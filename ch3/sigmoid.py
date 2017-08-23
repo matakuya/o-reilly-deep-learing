@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pylab as plt
 
+# シグモイド関数
 def sigmoid(x):
     return 1 / (1 + np.exp(-x))
 

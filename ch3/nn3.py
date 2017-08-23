@@ -1,4 +1,5 @@
 from sigmoid import sigmoid
+from identity import identity_function
 import numpy as np
 
 def init_network():
@@ -12,6 +13,7 @@ def init_network():
 
     return network
 
+# 3層NN
 def forward(network, x):
     W1, W2, W3 = network['W1'], network['W2'], network['W3']
     b1, b2, b3 = network['b1'], network['b2'], network['b3']
@@ -25,10 +27,8 @@ def forward(network, x):
 
     return y
 
-def identity_function(x):
-    return x
-
-network = init_network()
-x = np.array([1.0, 0.5])
-y = forward(network, x)
-print(y)
+if __name__ == "__main__":
+    network = init_network()
+    x = np.array([1.0, 0.5])
+    y = forward(network, x)
+    print(y)
